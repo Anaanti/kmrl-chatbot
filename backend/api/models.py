@@ -1,5 +1,7 @@
 from django.db import models
-from pgvector.djmodels import VectorField
+from pgvector.django import VectorField
+
+
 
 
 class Document(models.Model):
@@ -13,7 +15,9 @@ class Document(models.Model):
 class DocumentChunk(models.Model):
     document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name="chunks")
     chunk_text = models.TextField()
-    embedding = VectorField(dim=768)  # Ollama default embedding size
+    embedding = VectorField(dimensions=768)
+
+
 
     created_at = models.DateTimeField(auto_now_add=True)
 

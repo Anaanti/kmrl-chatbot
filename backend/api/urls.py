@@ -1,6 +1,5 @@
-from django.urls import path
-from .views import upload_document
+from .views import test_pgvector
 
 urlpatterns = [
-    path('upload/', upload_document),
+    path("test/", test_pgvector),
 ]

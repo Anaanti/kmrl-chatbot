@@ -8,6 +8,20 @@ from PyPDF2 import PdfReader
 
 from .models import Document
 from .serializers import DocumentSerializer
+from django.http import JsonResponse
+from .models import DocumentChunk
+from .embeddings import get_embedding
+
+def test_pgvector(request):
+    text = "This is a test sentence for embeddings."
+    emb = get_embedding(text)
+
+    obj = DocumentChunk.objects.create(
+        chunk_text=text,
+        embedding=emb
+    )
+
+    return JsonResponse({"saved_id": obj.id})
 
 
 def extract_text_from_pdf(file_path):
