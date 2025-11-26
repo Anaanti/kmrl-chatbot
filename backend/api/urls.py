@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import chat
+from .views import upload_document
 
 urlpatterns = [
-    path("chat/", chat, name="chat"),
+    path('upload/', upload_document),
 ]
