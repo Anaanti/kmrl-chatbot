@@ -1,12 +1,10 @@
-from rag_utils.embeddings import get_embedding
+# rag_utils/embeddings_store.py
+from django.db import connection
 
-# Example documents
-documents = [
-    {"id": 1, "text": "Hello world, this is a test document."},
-    {"id": 2, "text": "Ollama is a local LLM you can run."},
-    {"id": 3, "text": "RAG allows you to answer questions from documents."},
-]
-
-# Compute embeddings and store
-for doc in documents:
-    doc["embedding"] = get_embedding(doc["text"])
+def store_embedding(filename, chunk_text, embedding):
+    emb_str = "[" + ",".join(str(x) for x in embedding) + "]"
+    with connection.cursor() as cur:
+        cur.execute("""
+            INSERT INTO documents (filename, content, embedding)
+            VALUES (%s, %s, %s::vector)
+        """, [filename, chunk_text, emb_str])

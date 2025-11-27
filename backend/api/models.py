@@ -1,25 +1,12 @@
+# api/models.py
 from django.db import models
-from pgvector.django import VectorField
+from django.contrib.auth.models import User  # if you want to log user
 
-
-
-
-class Document(models.Model):
-    file = models.FileField(upload_to="documents/")
-    uploaded_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.file.name
-
-
-class DocumentChunk(models.Model):
-    document = models.ForeignKey(Document, on_delete=models.CASCADE, related_name="chunks")
-    chunk_text = models.TextField()
-    embedding = VectorField(dimensions=768)
-
-
-
-    created_at = models.DateTimeField(auto_now_add=True)
+class UnansweredQuery(models.Model):
+    query_text = models.TextField()
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    context = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return f"Chunk of {self.document.file.name}"
+        return self.query_text

@@ -1,66 +1,23 @@
-import os
-from rest_framework.decorators import api_view, parser_classes
-from rest_framework.parsers import MultiPartParser, FormParser
-from rest_framework.response import Response
-from rest_framework import status
-from django.conf import settings
-from PyPDF2 import PdfReader
-
-from .models import Document
-from .serializers import DocumentSerializer
+# backend/api/views.py
 from django.http import JsonResponse
-from .models import DocumentChunk
-from .embeddings import get_embedding
+from django.views.decorators.csrf import csrf_exempt
+from rag_utils.llm import ask_llm  # new subprocess-based Llama 3 wrapper
 
-def test_pgvector(request):
-    text = "This is a test sentence for embeddings."
-    emb = get_embedding(text)
+@csrf_exempt  # allows POST requests without CSRF token
+def ask(request):
+    if request.method == "POST":
+        query = request.POST.get("query", "").strip()
+        if not query:
+            return JsonResponse({"error": "No query provided"}, status=400)
 
-    obj = DocumentChunk.objects.create(
-        chunk_text=text,
-        embedding=emb
-    )
+        # Call Llama 3 via our new wrapper
+        answer = ask_llm(query)
 
-    return JsonResponse({"saved_id": obj.id})
-
-
-def extract_text_from_pdf(file_path):
-    reader = PdfReader(file_path)
-    text = ""
-    for page in reader.pages:
-        text += page.extract_text() or ""
-    return text
-
-
-@api_view(['POST'])
-@parser_classes([MultiPartParser, FormParser])
-def upload_document(request):
-    try:
-        uploaded_file = request.FILES.get('file')
-        if not uploaded_file:
-            return Response({"error": "No file uploaded"}, status=400)
-
-        # Save file to media root
-        save_path = os.path.join(settings.MEDIA_ROOT, uploaded_file.name)
-
-        with open(save_path, 'wb+') as f:
-            for chunk in uploaded_file.chunks():
-                f.write(chunk)
-
-        # Extract text
-        extracted_text = extract_text_from_pdf(save_path)
-
-        # Save Document entry
-        doc = Document.objects.create(
-            title=uploaded_file.name,
-            file=uploaded_file,
-        )
-
-        return Response({
-            "message": "Uploaded successfully",
-            "document_id": doc.id,
-            "extracted_text_preview": extracted_text[:300]
+        # Return as JSON
+        return JsonResponse({
+            "answer": answer,
+            "sources": [],      # you can keep empty if not using documents
+            "distances": []     # same here
         })
-
-    except Exception as e:
-        return Response({"error": str(e)}, status=500)
+    else:
+        return JsonResponse({"error": "Only POST requests allowed"}, status=405)

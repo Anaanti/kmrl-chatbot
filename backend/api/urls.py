@@ -1,5 +1,7 @@
-from .views import test_pgvector
+# api/urls.py
+from django.urls import path
+from .views import ask
 
 urlpatterns = [
-    path("test/", test_pgvector),
+    path("ask/", ask, name="ask"),
 ]

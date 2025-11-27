@@ -1,19 +1,19 @@
-# rag_utils/load_pdfs.py
+# rag_utils/load_documents.py
 import os
-from .chunker import chunk_text
-from .embedder import embed_text
-from .embeddings_store import store_embedding
-from .pdf_extractor import extract_text_from_pdf
+from rag_utils.chunker import chunk_text
+from rag_utils.embedder import embed_text
+from rag_utils.embeddings_store import store_embedding
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) 
-BASE_DIR = os.path.dirname(BASE_DIR)  
+BASE_DIR = os.path.dirname(BASE_DIR) 
+
 FOLDER = os.path.join(BASE_DIR, "docs")
 
-def load_pdf_files():
+def load_txt_files():
     for fname in os.listdir(FOLDER):
-        if fname.endswith(".pdf"):
+        if fname.endswith(".txt"):
             path = os.path.join(FOLDER, fname)
-            text = extract_text_from_pdf(path)
+            text = open(path, "r", encoding="utf-8").read()
             chunks = chunk_text(text)
             for i, chunk in enumerate(chunks):
                 emb = embed_text(chunk)
@@ -21,4 +21,4 @@ def load_pdf_files():
                 print("Inserted:", fname, "chunk", i)
 
 if __name__ == "__main__":
-    load_pdf_files()
+    load_txt_files()

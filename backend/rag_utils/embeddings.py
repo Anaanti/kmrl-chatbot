@@ -1,20 +1,9 @@
-import requests
-import os
+# rag_utils/embeddings.py
+from sentence_transformers import SentenceTransformer
 
-OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
+# 384-dimensional model
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 def get_embedding(text: str):
-    """
-    Returns a vector embedding for the given text using Ollama's embedding model.
-    """
-    response = requests.post(
-        f"{OLLAMA_URL}/api/embeddings",
-        json={"model": "nomic-embed-text", "prompt": text}
-    )
-
-    data = response.json()
-
-    if "embedding" not in data:
-        raise ValueError(f"Embedding failed: {data}")
-
-    return data["embedding"]
+    emb = model.encode(text)
+    return emb.tolist()

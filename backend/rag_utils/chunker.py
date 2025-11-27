@@ -1,4 +1,9 @@
-def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50):
+# rag_utils/chunker.py
+
+def chunk_text(text, chunk_size=500, overlap=50):
+    """
+    Splits text into chunks with overlap.
+    """
     chunks = []
     start = 0
     while start < len(text):

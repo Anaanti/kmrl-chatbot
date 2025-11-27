@@ -1,22 +1,38 @@
-from rag_utils.embeddings_store import documents as default_documents
+# rag_utils/vector_store.py
+import os
 import numpy as np
+from rag_utils.embeddings import get_embedding
+from rag_utils.loaders.txt_loader import load_txt_file  # or load multiple if you want
 
 def cosine_similarity(a, b):
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
+def load_documents_from_folder(folder_path="backend/docs"):
+    documents = []
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".txt"):
+            content = load_txt_file(os.path.join(folder_path, filename))
+            documents.append({
+                "name": filename,
+                "text": content,
+                "embedding": get_embedding(content)
+            })
+        elif filename.endswith(".pdf"):
+            from rag_utils.load_pdfs import load_pdf_text
+            content = load_pdf_text(os.path.join(folder_path, filename))
+            documents.append({
+                "name": filename,
+                "text": content,
+                "embedding": get_embedding(content)
+            })
+    return documents
+
 def query_documents(query, documents=None, top_k=2):
-    from rag_utils.embeddings import get_embedding
-    query_vec = get_embedding(query)
-    
-    # Use provided documents or default
+    # Load docs if none provided
     if documents is None:
-        documents = default_documents
-    
-    # Compute similarity with all documents
+        documents = load_documents_from_folder()
+
+    query_vec = get_embedding(query)
     similarities = [(doc, cosine_similarity(query_vec, doc["embedding"])) for doc in documents]
-    
-    # Sort by similarity
     similarities.sort(key=lambda x: x[1], reverse=True)
-    
-    # Return top_k documents with scores
     return similarities[:top_k]

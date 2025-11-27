@@ -1,8 +1,8 @@
-from embeddings import Embeddings  # your embeddings.py
+# rag_utils/embedder.py
+from .embeddings import get_embedding
 
-class Embedder:
-    def __init__(self):
-        self.embedder = Embeddings()
-
-    def embed_texts(self, texts: list):
-        return [self.embedder.get_embedding(text) for text in texts]
+def embed_text(text):
+    """
+    Returns embedding as a list (384-dim).
+    """
+    return get_embedding(text)
