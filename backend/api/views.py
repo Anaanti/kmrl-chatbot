@@ -1,7 +1,7 @@
 # backend/api/views.py
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from rag_utils.llm import ask_llm  # new subprocess-based Llama 3 wrapper
+from rag_utils.llm import ask_llm 
 
 @csrf_exempt  # allows POST requests without CSRF token
 def ask(request):
