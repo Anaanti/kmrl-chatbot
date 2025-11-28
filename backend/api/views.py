@@ -1,23 +1,13 @@
-# backend/api/views.py
 from django.http import JsonResponse
+from rag_utils.query_llm import answer_query
 from django.views.decorators.csrf import csrf_exempt
-from rag_utils.llm import ask_llm 
+import json
 
-@csrf_exempt  # allows POST requests without CSRF token
+@csrf_exempt
 def ask(request):
     if request.method == "POST":
-        query = request.POST.get("query", "").strip()
-        if not query:
-            return JsonResponse({"error": "No query provided"}, status=400)
-
-        # Call Llama 3 via our new wrapper
-        answer = ask_llm(query)
-
-        # Return as JSON
-        return JsonResponse({
-            "answer": answer,
-            "sources": [],      # you can keep empty if not using documents
-            "distances": []     # same here
-        })
-    else:
-        return JsonResponse({"error": "Only POST requests allowed"}, status=405)
+        data = json.loads(request.body)
+        query = data.get("query")
+        result = answer_query(query)
+        return JsonResponse(result)
+    return JsonResponse({"error": "POST method required"}, status=400)

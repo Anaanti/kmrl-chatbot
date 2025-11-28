@@ -1,39 +1,26 @@
-# rag_utils/ingest.py
-from .embedder import embed_text
-from .models import Document  # Your Django model
-import math
+from api.models import DocumentEmbedding
+from rag_utils.llm import get_embedding  # your Ollama wrapper
+from rag_utils.load_pdfs import load_pdf_chunks
+from rag_utils.load_txt import load_txt_chunks
 
-def split_into_chunks(text, chunk_size=500, overlap=50):
-    """
-    Splits text into chunks of chunk_size with overlap.
-    """
-    chunks = []
-    start = 0
-    text_length = len(text)
+def ingest_document(file_path, doc_name):
+    if file_path.endswith(".pdf"):
+        chunks = load_pdf_chunks(file_path)
+    elif file_path.endswith(".txt"):
+        chunks = load_txt_chunks(file_path)
+    else:
+        raise ValueError("Unsupported file type")
 
-    while start < text_length:
-        end = min(start + chunk_size, text_length)
-        chunk = text[start:end]
-        chunks.append(chunk)
-        start += chunk_size - overlap
-
-    return chunks
-
-def cmrf(document_text, title=None):
-    """
-    Chunk, embed, and store a document in Postgres.
-    Maintains 384-dimensional embeddings.
-    """
-    chunks = split_into_chunks(document_text)
-    for i, chunk in enumerate(chunks):
-        embedding = embed_text(chunk)  # 384-dim vector
-        Document.objects.create(
-            title=title or f"chunk-{i}",
-            content=chunk,
-            embedding=embedding  # make sure your DB column supports 384-dim
+    for chunk_text in chunks:
+        embedding = get_embedding(chunk_text)  # automatically generated
+        DocumentEmbedding.objects.create(
+            doc_name=doc_name,
+            content=chunk_text,
+            embeddings=embedding
         )
 
-    return f"{len(chunks)} chunks ingested successfully."
-
-# Example usage:
-# cmrf("This is a long document text...", title="Sample Doc")
+def ingest_folder(folder_path):
+    import os
+    for file_name in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, file_name)
+        ingest_document(file_path, doc_name=file_name)

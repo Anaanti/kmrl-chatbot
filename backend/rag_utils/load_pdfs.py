@@ -1,24 +1,10 @@
-# rag_utils/load_pdfs.py
-import os
-from .chunker import chunk_text
-from .embedder import embed_text
-from .embeddings_store import store_embedding
-from .pdf_extractor import extract_text_from_pdf
+from PyPDF2 import PdfReader
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__)) 
-BASE_DIR = os.path.dirname(BASE_DIR)  
-FOLDER = os.path.join(BASE_DIR, "docs")
-
-def load_pdf_files():
-    for fname in os.listdir(FOLDER):
-        if fname.endswith(".pdf"):
-            path = os.path.join(FOLDER, fname)
-            text = extract_text_from_pdf(path)
-            chunks = chunk_text(text)
-            for i, chunk in enumerate(chunks):
-                emb = embed_text(chunk)
-                store_embedding(f"{fname}_chunk{i}", chunk, emb)
-                print("Inserted:", fname, "chunk", i)
-
-if __name__ == "__main__":
-    load_pdf_files()
+def load_pdf_chunks(file_path, chunk_size=500):
+    reader = PdfReader(file_path)
+    text = ""
+    for page in reader.pages:
+        text += page.extract_text() + " "
+    # Simple chunking
+    chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
+    return chunks
