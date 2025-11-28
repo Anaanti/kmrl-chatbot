@@ -1,0 +1,464 @@
+Folder map of c:\Users\yatia\kmrl-chatbot
+==================================================
+
+├── .git/
+│   ├── hooks/
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── info/
+│   │   └── exclude
+│   ├── logs/
+│   │   ├── refs/
+│   │   │   ├── heads/
+│   │   │   │   └── main
+│   │   │   └── remotes/
+│   │   │       └── origin/
+│   │   │           ├── HEAD
+│   │   │           └── main
+│   │   └── HEAD
+│   ├── objects/
+│   │   ├── 03/
+│   │   │   └── 173201f225782609f54b0f7b8f47a0f6d05492
+│   │   ├── 07/
+│   │   │   └── 1f99c5e6a8aff9d8373d37a85653f98bc842d2
+│   │   ├── 09/
+│   │   │   └── ad0edd3ca7d45037571783c687922e230c1d3d
+│   │   ├── 0c/
+│   │   │   ├── 2fd27f68a1f6a57e5c19420b6fb89f045f678a
+│   │   │   └── a3338429c5a97d962a44e99a5366ff4dbc7960
+│   │   ├── 0d/
+│   │   │   └── ccb46100e5447e1fa5ad2d40742bc05f2806de
+│   │   ├── 0f/
+│   │   │   └── 0da1d620a27b6ce377ef262c752919a23f61a0
+│   │   ├── 10/
+│   │   │   └── 88a34e0f56176136da2c63c24256e68dfb3858
+│   │   ├── 17/
+│   │   │   └── 00fbede24f41ecd50180e3e0e23e14a7dd977d
+│   │   ├── 19/
+│   │   │   └── 9614d75e0c63cb46aae4f23ce0baa30fd29e6f
+│   │   ├── 1c/
+│   │   │   └── 61dba2938979df4948a959ba3d718155770255
+│   │   ├── 1f/
+│   │   │   ├── 06b4fdbdc655b2bf95ec12ecd566c62c226ee3
+│   │   │   └── b1b9db279f4448ae0d66f2c819f8ad4b21ad28
+│   │   ├── 20/
+│   │   │   └── 7752e11680303b3670d359afdfc6eb451c5017
+│   │   ├── 23/
+│   │   │   └── c0071eab91555f9db7416ac50e1ae74fe14424
+│   │   ├── 24/
+│   │   │   └── 4b83f1fb9306db250bebc00ec2f711dfcd0d5e
+│   │   ├── 25/
+│   │   │   ├── 94126112072c0eaf1dbb52d7e285c5d73852ef
+│   │   │   └── 9bd076a26d77f86aed9ab234a7aabaabc36dc5
+│   │   ├── 28/
+│   │   │   ├── 9f234caee5ad456a24fc8fc3b2894c8c481ae9
+│   │   │   └── ff5b736e322409331249443297d7b59e446cdb
+│   │   ├── 29/
+│   │   │   └── 328b3fcd0ef571ddc6bc3b68673b5d5a01934f
+│   │   ├── 2a/
+│   │   │   └── 1b434ec533e7b83d4f37f8f2077bde6b3a29eb
+│   │   ├── 2d/
+│   │   │   ├── 8bdbcb5297dd3761e29974d5049eda36366322
+│   │   │   └── 9d99b405c211fe2d8174c517a5af34346144b9
+│   │   ├── 2e/
+│   │   │   └── 42ae94c6050ac53cf9a8af3570d1f9c21f1aff
+│   │   ├── 30/
+│   │   │   ├── 2c0fe43a85baccb01d8c4915f66fbb7e3313c7
+│   │   │   └── d842067a560302b37ff7eb5bbe777784930476
+│   │   ├── 33/
+│   │   │   ├── 392a8ed47548ca6b90b581be7c177bee41073e
+│   │   │   └── 6c6930ba4aa3d154445f0849a97f6eda0de819
+│   │   ├── 36/
+│   │   │   └── 6b0589974656aa932df9e7928ed9fd2629eea6
+│   │   ├── 37/
+│   │   │   └── 633a6a90f4951c59c4092e48659dcf018a78e3
+│   │   ├── 39/
+│   │   │   └── 352a2c27056204c8516e3589cdb813377ff755
+│   │   ├── 3b/
+│   │   │   ├── 3c14e131fb027791b655127968497b7c9887db
+│   │   │   ├── 6f83a75a8459b1c6bb6b98063eb25d767d0f89
+│   │   │   └── e7abcba2f9b8c6b042bc020e4c25f2a9b2265e
+│   │   ├── 3e/
+│   │   │   └── 59cab21eba2336b943080d07d369b90a4b9c31
+│   │   ├── 40/
+│   │   │   └── 58fce38d416a314e1f5ed36cd1ae3c921a2d6d
+│   │   ├── 42/
+│   │   │   ├── 5559a7264824e6b0c3901bc499e26107c60f6d
+│   │   │   └── 80b8c0bc08b36b60ba20011e5f6c10bc74e625
+│   │   ├── 44/
+│   │   │   ├── 22eaa0ac4a6f321f34e87b3f7acf174ff2510b
+│   │   │   └── d781e3fb28a5b06a64af17adac1e0afd23a705
+│   │   ├── 45/
+│   │   │   └── ca41724d22b700be3d90a38c40c373dc5d2c95
+│   │   ├── 46/
+│   │   │   └── 40d047d4c993dc25d3c82dc1a7bbf7f6159c9d
+│   │   ├── 48/
+│   │   │   └── f13d0d04a6873daa2f496b023e9cc13fd7e300
+│   │   ├── 49/
+│   │   │   └── bb2b9e832572e26e6d9e151e7c11f40d220a45
+│   │   ├── 4b/
+│   │   │   ├── 3bc316aeede9a0194fde5add5174acd0eb9b5c
+│   │   │   └── 499b4fc874d3d9540aa2d5072b338017c1789f
+│   │   ├── 4d/
+│   │   │   └── c531eaf611b51aacbd2743047d11893bbe76fb
+│   │   ├── 50/
+│   │   │   └── 531aa7f291d57213b3343800d180a3fe58acc2
+│   │   ├── 51/
+│   │   │   └── 5e35376c36cdf84d29c0267f8bdfbef0cc19da
+│   │   ├── 53/
+│   │   │   └── ed845d021e712bdfba8973b1388c6f2f9c322e
+│   │   ├── 54/
+│   │   │   ├── 57c5bb714da4db843fe12892391330a6c7b052
+│   │   │   └── 5eb78a5753081ea019b5ff335b7576298638e2
+│   │   ├── 56/
+│   │   │   └── 7bb2b092028ceb6ff126e199f17cfb05772dd3
+│   │   ├── 5a/
+│   │   │   ├── 91287b0f43942c8a3918efc4c96f01180b3bac
+│   │   │   └── f23486801fbe0b721cf9e8656adfbb1406426a
+│   │   ├── 5b/
+│   │   │   ├── 5f24dbfb2b9827c530149ec4ee240097476c8b
+│   │   │   └── d1b2573247e3c144b4a4ad26783e0ab9312186
+│   │   ├── 5c/
+│   │   │   ├── 5d6701ed53e9e0f94c7edd69acb4c0a26a7dfd
+│   │   │   └── e2ca3756f818c0c1a5e25eb1371d9904234880
+│   │   ├── 5e/
+│   │   │   ├── 00bc162309f79c21e965e21c3737f1e2fadfa9
+│   │   │   └── d6cd25485c461693a26fdfe22ab25e05050bf2
+│   │   ├── 5f/
+│   │   │   └── e80d541ed45b610886c74db981844596e944d7
+│   │   ├── 60/
+│   │   │   └── 89454e1859bcb3ac5200c1b6cdba4bea59c17e
+│   │   ├── 62/
+│   │   │   └── 08bc23ee90af373c21bb76305ea14262ed8641
+│   │   ├── 63/
+│   │   │   └── 37929b56267e85d51dc915d1f78797cfaef1f2
+│   │   ├── 64/
+│   │   │   └── f595c3a367af9c97f590105c44938cd1d6c9d3
+│   │   ├── 65/
+│   │   │   └── b6a774b5ca2b2d2f4d3244e223a0dd6c3d12c5
+│   │   ├── 66/
+│   │   │   ├── 1c8f51a57a0a2f01953c2e30494ae485d38933
+│   │   │   └── 656fd29b2cc651c92dc03b2eaf6ef9a4397df0
+│   │   ├── 67/
+│   │   │   └── 3d51f8d128fb665ccc0e96b8106f88423e220f
+│   │   ├── 6a/
+│   │   │   ├── 199739647274de3a7468db3cf3cd6b643ed1df
+│   │   │   └── a1b52571c7e848064cd2bdcf05095dc59a4375
+│   │   ├── 6c/
+│   │   │   ├── 082481baa7e3cd6cadddc6261a8a98c6b39ace
+│   │   │   └── a257236a51eb28b4c90eec800eca972da0ed49
+│   │   ├── 6d/
+│   │   │   ├── 2075e92c5268edae90dfa2ec79c68f824bd656
+│   │   │   └── f3c5914f03b90b112af7257ec5818d4b84dcc2
+│   │   ├── 6e/
+│   │   │   └── b2d5ea6d21579241ef32ad0bcc1a41eeed381f
+│   │   ├── 6f/
+│   │   │   ├── 25315d6b4ce00e3cb6651f42dcb8e4b5f7dc30
+│   │   │   └── ef18c1474dcb729f72c32b4b2e459d90589688
+│   │   ├── 70/
+│   │   │   └── 3393e8be0325d84d03d59a350d4363067bbb3e
+│   │   ├── 71/
+│   │   │   ├── a836239075aa6e6e4ecb700e9c42c95c022d91
+│   │   │   └── b4f03ef86529a2cfa9cbf74a722901d5130586
+│   │   ├── 72/
+│   │   │   └── 8d44d7c88693db89e2facfb62c3e26edfe7644
+│   │   ├── 75/
+│   │   │   └── 6ab7b7abdbccc6aac68e36aedbdb0a99b98431
+│   │   ├── 78/
+│   │   │   ├── 9cbc2d59402ed08168197bf42fdff3d3477813
+│   │   │   └── e29cd9122133f84e24a2ac91ae537eb595fca7
+│   │   ├── 7a/
+│   │   │   └── ace8336f647cb933dab4643ba180a546088e68
+│   │   ├── 7c/
+│   │   │   ├── 2a57a4fbf11a05fbc92c92270fd7ba3e483371
+│   │   │   ├── 38a5eb2ebb5ddabc5c9cab55422120414dddb3
+│   │   │   └── e503c2dd97ba78597f6ff6e4393132753573f6
+│   │   ├── 7d/
+│   │   │   └── 336a39ccac0d2b5cc4fd7ea4d0cbed52e7583d
+│   │   ├── 7e/
+│   │   │   └── e116b57572eea492b8da8f87456a3559f63c2b
+│   │   ├── 7f/
+│   │   │   └── ab04017cdbb5bb86ec561dadfb163a1c564475
+│   │   ├── 81/
+│   │   │   ├── 73528a508bba038c8e7f9b2d84d90e7e4c410f
+│   │   │   └── 775c83fa90da0b941201020b85c6339ee1df82
+│   │   ├── 82/
+│   │   │   └── 7770685091c5fdea32bc3939ccc5c1d5770f76
+│   │   ├── 83/
+│   │   │   └── 3e3850e3af731aa764ec08754bd822c82a1a61
+│   │   ├── 85/
+│   │   │   ├── 48e68709a61df2ed1023b6ad1b4297e34c5f38
+│   │   │   └── a61ad926db3749346de76315e28491869069c6
+│   │   ├── 88/
+│   │   │   └── 6dd805363be4b917cb1909c2de813f816fc7ec
+│   │   ├── 8a/
+│   │   │   ├── 90c95b38d4776ca507a973eeb4d424147abf0b
+│   │   │   └── d46fb6f807844ce61b4fc29eb4acadf95ab677
+│   │   ├── 8c/
+│   │   │   ├── 1fa156e3f405ed895b56f98bc359db43bf2102
+│   │   │   ├── 26455e542e3b02c11c65d24b1e73e5426c0251
+│   │   │   ├── 26f8c500d5cb4e4c110f27a3be909c4cb4ff62
+│   │   │   └── 38f3f3dad51e4585f3984282c2a4bec5349c1e
+│   │   ├── 8d/
+│   │   │   └── 4243355b7a5ea51e21e19a24887cd1bbe004ad
+│   │   ├── 8f/
+│   │   │   └── 821f6ce72326caa02f686c59dc2a6c934ca091
+│   │   ├── 90/
+│   │   │   └── a16ca420fd3082dd04144d8d21dd7cbe4b770b
+│   │   ├── 91/
+│   │   │   └── eb0ab052c4b8e1656acdec5756e47f8b5b63ea
+│   │   ├── 92/
+│   │   │   ├── 49964192b699c4c016be05aced53a2c4ca6bb8
+│   │   │   └── c18da3c54c9779a598e654d430a662adf274fb
+│   │   ├── 94/
+│   │   │   ├── 9facbd3aff36852a2c3d18e72f298ccfd6e8a9
+│   │   │   └── e48d5279bed639be12d1ca6a2dd3ba93dd8e5f
+│   │   ├── 98/
+│   │   │   └── 355895dca6d6746ce7c3aeb8611495f5b380f2
+│   │   ├── 99/
+│   │   │   ├── 058db2feb2975da4cdb60049ddf16924b72bbd
+│   │   │   └── bda7f10ca9fe3b15106c1fc83cfc8169c6b1d5
+│   │   ├── 9b/
+│   │   │   └── 7ee65bfcdee98a722ceb8f7fd8b61afb6052a8
+│   │   ├── 9c/
+│   │   │   ├── 990873d7fb7b5e7fac3e6c425db355a6dc3265
+│   │   │   └── d7a32d51a3a05b223c2a237f48c631ab13be8c
+│   │   ├── 9d/
+│   │   │   └── ffb413efd514956f36f8e4a1fa50384e779ba9
+│   │   ├── 9e/
+│   │   │   └── 97276fd29628a97c50f3fe74a143c531c6946f
+│   │   ├── 9f/
+│   │   │   ├── 61f385404e754a828cd0b9b4fa436815868480
+│   │   │   ├── 6e62a98590b1b49d1be1a25c17c685e245e249
+│   │   │   └── 8e6c4b14efe1ea70ba9e825e205c349d648b79
+│   │   ├── a2/
+│   │   │   └── 5309c29acfb5c2c2c005168565daa8869abde4
+│   │   ├── a3/
+│   │   │   └── d9b6bc9d98f31e091b661cac315a36c0bc9051
+│   │   ├── a4/
+│   │   │   └── 2b39932bb6e64c784ef860bf5a8f3fdb6dd7e6
+│   │   ├── a7/
+│   │   │   └── 633dea9d76fe4bb8e45cd1f849d6770ae4592d
+│   │   ├── ab/
+│   │   │   ├── 3893be18a243d42a7434b1b829242688203284
+│   │   │   └── 9d086a55caa60dea24f3e9d0267ede287c8f3d
+│   │   ├── ac/
+│   │   │   └── b2525b6d5c256dd82672b9b7ca3cd2f6928b70
+│   │   ├── b0/
+│   │   │   └── 0d7504a59c4e2a98a42649c61d5b692578a7ec
+│   │   ├── b2/
+│   │   │   └── f2d0079f30c6c21908ea550d7eebf9e17fcd58
+│   │   ├── b4/
+│   │   │   └── 9d7d9e40a5499456d62598305e7e8b216a13d7
+│   │   ├── b6/
+│   │   │   ├── 2b37266f66d5768ab6aaae781fba3116c7d551
+│   │   │   ├── 7c554bc6c1bd37689ccbfdbbfc7b71d2a7399a
+│   │   │   ├── 838afb88d6c2e6e796984e2b88343bf53a3381
+│   │   │   └── f41610c8de96cc0ab246d09c9ef75230f44f1c
+│   │   ├── b8/
+│   │   │   ├── 4a8241c460d9bf74ef7b4d044bb08161c94bf7
+│   │   │   └── adcb5f982c153ba0e1a3796de521eef0be2841
+│   │   ├── b9/
+│   │   │   └── 43a09b433e225099d86d8aa56febe6dd48160e
+│   │   ├── ba/
+│   │   │   └── 0ef9d7f9d3ef27969df0a836784d15bd349cc0
+│   │   ├── bc/
+│   │   │   └── bd03429ae711d12efbacece9a3fdf09fae94d5
+│   │   ├── bd/
+│   │   │   └── 21febf5944bc706a487cdb03c8857a79cb48e8
+│   │   ├── c1/
+│   │   │   └── acc79366c0c8849c704c61a3f1ae3d7efd394a
+│   │   ├── c4/
+│   │   │   └── deaa929adf59c5a637a739afbe3d6d46c665cf
+│   │   ├── c5/
+│   │   │   └── a260e9d9010892b12ba2c1363dbde2558c742f
+│   │   ├── c7/
+│   │   │   └── eff0d2bb60551016d0a1a0743c70bfa71eb674
+│   │   ├── c9/
+│   │   │   └── 0e8210df8faab87a58b0d5175d41b865c1be83
+│   │   ├── ca/
+│   │   │   ├── 524c0f04ae61805e04f6e99576c900ea73969c
+│   │   │   └── df6826d787a8cc8d6c025d7d02e700915f6bf6
+│   │   ├── cb/
+│   │   │   └── 1af425402e943a730f34ad4037a5a4c5b6be12
+│   │   ├── cc/
+│   │   │   └── 8cfb0629a26cb11467ab8fdf41a020e0ed13e0
+│   │   ├── ce/
+│   │   │   ├── 034057c5f4d6c540ba17dd4f6fe83b002579b8
+│   │   │   ├── 5c07924028695ad8059ed9acc221fc38d70fd6
+│   │   │   └── 747a5b54f5290c0f09411bcdbdd32aa820b43d
+│   │   ├── cf/
+│   │   │   ├── 0cfa48ebfe27760bd3870a34d6b1b14cc667bb
+│   │   │   └── 7f718f8d79a4bdf7d3ff7f3ff7acda63ce93d8
+│   │   ├── d1/
+│   │   │   └── b6e36abb96830d78733e54b989b05a0fe88c41
+│   │   ├── d5/
+│   │   │   ├── 2cabd74cd1eb2e92d13af06fef0b02d3bd1c2e
+│   │   │   └── ff22c6c788f03ad4ace92f5f3450c94326cb78
+│   │   ├── d9/
+│   │   │   └── dc18fe98f731e827e3dba6a624dcb943307d57
+│   │   ├── da/
+│   │   │   └── 49aec388f9adceaea636a74a747504903a5c5b
+│   │   ├── db/
+│   │   │   └── 7bde58a45cd7ac68ad0388754e1ee262e9d02c
+│   │   ├── dc/
+│   │   │   └── 2b7d3ef9c13fbee2563c6b541470c9e32a75c0
+│   │   ├── df/
+│   │   │   ├── 65305723b0de678c39c418e37b90c4432d7133
+│   │   │   └── cbaab6e00edcc40a44f2c761faf7fead1f47d0
+│   │   ├── e0/
+│   │   │   └── 600450b6014d1c641db2f2a78467835a1e2e6f
+│   │   ├── e1/
+│   │   │   └── 0b62ae480c05eda90863a9099360413beb7252
+│   │   ├── e4/
+│   │   │   └── 7aacd4a99ac8ec8f9544e6d81fd7f1784b68e3
+│   │   ├── e5/
+│   │   │   └── 60c7b6b114ef2d8ca5c78565efc09a52a18148
+│   │   ├── e6/
+│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+│   │   ├── e7/
+│   │   │   └── c273e238ada63307f2a555d03325f40e0f5de2
+│   │   ├── e8/
+│   │   │   └── bdee1ea4892d730c71957ff2ee3823a1e900e3
+│   │   ├── e9/
+│   │   │   └── 0e4043faac6a48be584940de94e64a51562339
+│   │   ├── eb/
+│   │   │   └── 6431e2c0b15d12a46e1e435facbc8484b6f0ac
+│   │   ├── ed/
+│   │   │   ├── 2f0e40b93ea68c9a376178b1b26bd031c3c06d
+│   │   │   └── e3316eb724696c7bc2329157c3134dd3f0827d
+│   │   ├── ee/
+│   │   │   └── e31710c879a65e5215b05655c32f05b779a239
+│   │   ├── f1/
+│   │   │   └── 5ea9cdf13c1ca57927e024b5aea1e7a378ef69
+│   │   ├── f2/
+│   │   │   └── 0335267d2a302b7eab538ba373f6dc58a8339b
+│   │   ├── f3/
+│   │   │   └── c47c09df821e87f0cac3ece851b99ebe38a8f7
+│   │   ├── f8/
+│   │   │   └── 6bc1b91fdac8e8cdb3045871fc989a6ee89377
+│   │   ├── fd/
+│   │   │   └── bdc90c794719f9c759e45a7a4c9157329accee
+│   │   ├── info/
+│   │   └── pack/
+│   ├── refs/
+│   │   ├── heads/
+│   │   │   └── main
+│   │   ├── remotes/
+│   │   │   └── origin/
+│   │   │       ├── HEAD
+│   │   │       └── main
+│   │   └── tags/
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── index
+│   └── ORIG_HEAD
+├── backend/
+│   ├── api/
+│   │   ├── __pycache__/
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── admin.cpython-312.pyc
+│   │   │   ├── apps.cpython-312.pyc
+│   │   │   ├── models.cpython-312.pyc
+│   │   │   ├── rag_query.cpython-312.pyc
+│   │   │   ├── serializers.cpython-312.pyc
+│   │   │   ├── urls.cpython-312.pyc
+│   │   │   └── views.cpython-312.pyc
+│   │   ├── migrations/
+│   │   │   ├── __pycache__/
+│   │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   │   ├── 0001_initial.cpython-312.pyc
+│   │   │   │   ├── 0002_remove_document_embedding_remove_document_title_and_more.cpython-312.pyc
+│   │   │   │   └── 0003_remove_documentchunk_document_unansweredquery_and_more.cpython-312.pyc
+│   │   │   ├── __init__.py
+│   │   │   ├── 0001_initial.py
+│   │   │   ├── 0002_remove_document_embedding_remove_document_title_and_more.py
+│   │   │   └── 0003_remove_documentchunk_document_unansweredquery_and_more.py
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── backend/
+│   │   ├── __pycache__/
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── settings.cpython-312.pyc
+│   │   │   ├── urls.cpython-312.pyc
+│   │   │   └── wsgi.cpython-312.pyc
+│   │   ├── __init__.py
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── docs/
+│   │   ├── sample1.pdf
+│   │   └── sample2.txt
+│   ├── rag_utils/
+│   │   ├── __pycache__/
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── chunker.cpython-312.pyc
+│   │   │   ├── embedder.cpython-312.pyc
+│   │   │   ├── embeddings_store.cpython-312.pyc
+│   │   │   ├── embeddings.cpython-312.pyc
+│   │   │   ├── ingest_documents.cpython-312.pyc
+│   │   │   ├── ingest.cpython-312.pyc
+│   │   │   ├── llm.cpython-312.pyc
+│   │   │   ├── load_documents.cpython-312.pyc
+│   │   │   ├── load_pdfs.cpython-312.pyc
+│   │   │   ├── load_txt.cpython-312.pyc
+│   │   │   ├── ollama_client.cpython-312.pyc
+│   │   │   ├── pdf_extractor.cpython-312.pyc
+│   │   │   ├── query_llm.cpython-312.pyc
+│   │   │   ├── rag_query.cpython-312.pyc
+│   │   │   ├── search.cpython-312.pyc
+│   │   │   ├── test_rag.cpython-312.pyc
+│   │   │   ├── test_retrieval.cpython-312.pyc
+│   │   │   └── vector_store.cpython-312.pyc
+│   │   ├── loaders/
+│   │   │   ├── __pycache__/
+│   │   │   │   ├── __init__.cpython-312.pyc
+│   │   │   │   ├── pdf_loader.cpython-312.pyc
+│   │   │   │   └── txt_loader.cpython-312.pyc
+│   │   │   ├── __init__.py
+│   │   │   ├── pdf_loader.py
+│   │   │   └── txt_loader.py
+│   │   ├── __init__.py
+│   │   ├── chunker.py
+│   │   ├── embedder.py
+│   │   ├── embeddings.py
+│   │   ├── ingest_documents.py
+│   │   ├── ingest.py
+│   │   ├── llm.py
+│   │   ├── load_documents.py
+│   │   ├── load_pdfs.py
+│   │   ├── load_txt.py
+│   │   ├── ollama_client.py
+│   │   ├── pdf_extractor.py
+│   │   ├── query_llm.py
+│   │   ├── rag_engine.py
+│   │   ├── search.py
+│   │   ├── test_retrieval.py
+│   │   └── vector_store.py
+│   ├── .env
+│   ├── db.sqlite3
+│   ├── manage.py
+│   └── requirements.txt
+└── .gitignore
