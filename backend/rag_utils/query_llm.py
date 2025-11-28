@@ -39,7 +39,8 @@ def load_llm_model():
         llm = Llama(
             model_path=MODEL_PATH,
             n_ctx=4096,
-            n_gpu_layers=0, # Set to 0 for CPU-only
+            n_gpu_layers=0, 
+            n_threads=8,
             verbose=False
         )
         print(f"Successfully loaded local LLM from: {MODEL_PATH}")
@@ -163,6 +164,3 @@ Answer:"""
     # Constructing the expected output structure for the Django view
     return {"answer": answer, "sources": top_docs}
 
-# ---------------------------
-# Optional test block (__main__) MUST be REMOVED
-# ---------------------------
