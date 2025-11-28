@@ -1,0 +1,37 @@
+KMRL KNOWLEDGE TRANSFER CHATBOT – PROJECT PLAN (VERSION 0.9)
+
+1. Objective
+Build a Retrieval-Augmented Generation (RAG) chatbot for internal
+KMRL teams to access operational policies, troubleshooting steps,
+and department knowledge.
+
+2. Architecture Overview
+- Document Ingestion Pipeline (S3 → Summarizer → PostgreSQL + pgvector)
+- Retrieval Layer (similarity search using embeddings)
+- LLM Response Generation Layer
+- Admin UI for monitoring document updates
+
+3. Key Deliverables
+- Backend API for query processing
+- Document embedding and versioning
+- Web-based chat interface
+- Automated ingestion job for new documents
+
+4. Milestones
+- Week 1: Set up database, pgvector, and initial schemas
+- Week 2: Implement embeddings + ingestion
+- Week 3: Build retrieval + ranking logic
+- Week 4: Integrate LLM generation and context fusion
+- Week 5: Deploy initial version and conduct internal testing
+
+5. Risks & Mitigation
+- Risk: Out-of-date documents → Mitigation: auto-ingestion + hashing
+- Risk: LLM hallucination → Mitigation: strict context-first prompting
+- Risk: Load issues → Mitigation: caching + query limits
+
+6. Success Metrics
+- <2 seconds average response time
+- 90% accuracy in retrieving correct context
+- Positive feedback from station controllers and OCC staff
+
+END OF DOCUMENT

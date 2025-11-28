@@ -81,7 +81,7 @@ def generate_answer(prompt_template: str) -> str:
         response = llm(
             prompt_template,
             max_tokens=512,
-            # Use LLaMA chat formatting stop tokens for clean output
+            # FINAL FIX: The stop parameter is clean to allow the LLM to output the full answer
             stop=["<|eot_id|>", "<|end_of_text|>", "user:", "Question:"],
             temperature=0.1,
             echo=False,
@@ -128,7 +128,10 @@ def query_documents(user_query, top_k=5):
             if isinstance(embeddings, str):
                 embeddings = [float(x) for x in embeddings.strip("[]").split(",")]
             dist = euclidean(vec, embeddings)
-            results.append({"doc_name": doc_name, "content": content, "similarity": dist})
+            
+            # CRITICAL FIX: Convert distance (dist) to a standard float to solve the Django TypeError
+            results.append({"doc_name": doc_name, "content": content, "similarity": float(dist)}) 
+            
         except Exception as e:
             print(f"Skipping {doc_name} due to error: {e}")
 
@@ -150,13 +153,10 @@ You are an accurate assistant for the KMRL project.
 Use ONLY the context provided in the CONTEXT section to answer the user's query.
 If the answer is not in the context, state: "I cannot answer this based on the provided KMRL documents."
 <|eot_id|><|start_header_id|>user<|end_header_id|>
-CONTEXT:
----
-{context_str}
----
+CONTEXT: {context_str}
 QUERY: {user_query}
 <|eot_id|><|start_header_id|>assistant<|end_header_id|>
-"""
+Answer:"""
     # Call the new local generation function
     answer = generate_answer(prompt_template)
 

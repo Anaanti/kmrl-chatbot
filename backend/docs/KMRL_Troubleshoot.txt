@@ -1,0 +1,41 @@
+KMRL TROUBLESHOOTING GUIDE – INTERNAL USE
+
+1. Platform Screen Door (PSD) Misalignment
+Symptoms:
+- Doors not closing fully.
+Fix:
+- Reset PSD controller at the side panel.
+- If issue persists, switch to manual override and alert OCC.
+
+2. Ticket Gate Not Scanning
+Symptoms:
+- QR code rejected repeatedly.
+Fix:
+- Clean scanner lens with microfiber cloth.
+- Restart gate subsystem using the under-panel switch.
+
+3. Escalator Emergency Stop Triggered
+Symptoms:
+- Escalator halted unexpectedly.
+Fix:
+- Check for object obstruction.
+- Reset E-stop and run diagnostics before re-enabling.
+
+4. CCTV Feed Frozen
+Symptoms:
+- Live feed not updating.
+Fix:
+- Restart camera node using the station network panel.
+- If more than 3 cameras fail, escalate to IT support immediately.
+
+5. Intercom Not Working
+Symptoms:
+- Passenger call not audible.
+Fix:
+- Verify power to intercom unit.
+- Test internal wiring. If broken, notify electrical team.
+
+These fixes represent common issues observed by station controllers
+and field technicians during day-to-day metro operations.
+
+END OF DOCUMENT

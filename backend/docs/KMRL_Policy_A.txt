@@ -1,0 +1,32 @@
+KMRL POLICY DOCUMENT – OPERATIONS & SAFETY (VERSION 1.4)
+
+1. Purpose
+This policy outlines the standard operating procedures (SOPs) for
+train operations, station management, safety compliance, and
+maintenance coordination across all Kochi Metro stations.
+
+2. Train Operations
+- Minimum headway during peak hours: 6 minutes.
+- All trains must undergo pre-departure brake tests.
+- OCC approval required for unscheduled halts or route deviations.
+
+3. Station Management
+- Station controllers must submit hourly footfall updates.
+- Public announcements must follow the approved messaging template.
+- Emergency exits must remain accessible at all times.
+
+4. Safety Protocols
+- Daily safety inspection at every station before first service.
+- Fire extinguishers must be checked once per week.
+- Any safety incident must be logged in the OCC dashboard within 10 minutes.
+
+5. Maintenance Coordination
+- Track inspection every 48 hours.
+- Rolling stock checks are mandatory after every 300 km of operation.
+- All maintenance work orders must be digitally logged.
+
+6. Compliance
+Failure to follow the above guidelines may result in operational review,
+penalties, or retraining as mandated by the Operations Manager.
+
+END OF DOCUMENT
