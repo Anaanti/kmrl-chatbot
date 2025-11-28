@@ -1,10 +1,10 @@
 from rag_utils.llm import get_embedding, ask_llm
 import psycopg2
-import numpy as np
 import os
 from dotenv import load_dotenv
+import numpy as np
 
-# Load .env file
+# Load environment variables
 load_dotenv()
 
 def get_conn():
@@ -19,29 +19,26 @@ def get_conn():
 def cosine_similarity(vec1, vec2):
     vec1 = np.array(vec1)
     vec2 = np.array(vec2)
-    return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
+    if np.linalg.norm(vec1) == 0 or np.linalg.norm(vec2) == 0:
+        return 0.0
+    return float(np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2)))
 
 def query_documents(user_query, top_k=5):
     query_vector = get_embedding(user_query)
-    
     conn = get_conn()
     cur = conn.cursor()
-    
-    # Fetch all embeddings from DB
-    cur.execute("SELECT doc_name, content, embeddings FROM document_embedding")
+    cur.execute("SELECT doc_name, content, embeddings FROM api_documentembedding")
     rows = cur.fetchall()
-    
-    results = []
-    for doc_name, content, embeddings in rows:
-        sim = cosine_similarity(query_vector, embeddings)
-        results.append({"doc_name": doc_name, "content": content, "similarity": sim})
-    
-    # Sort by similarity descending and return top_k
-    results.sort(key=lambda x: x["similarity"], reverse=True)
-    
     cur.close()
     conn.close()
-    
+
+    results = []
+    for doc_name, content, embeddings in rows:
+        similarity = cosine_similarity(query_vector, embeddings)
+        results.append({"doc_name": doc_name, "content": content, "similarity": similarity})
+
+    # Sort by similarity descending
+    results.sort(key=lambda x: x["similarity"], reverse=True)
     return results[:top_k]
 
 def answer_query(user_query):
